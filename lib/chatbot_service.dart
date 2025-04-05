@@ -17,6 +17,7 @@ class ChatbotService {
     if (FirebaseAuth.instance.currentUser == null) {
       await FirebaseAuth.instance.signInAnonymously();
     }
+    print("Signed in user UID: ${FirebaseAuth.instance.currentUser?.uid}");
   }
 
   Future<String> getResponse(String query,
@@ -78,7 +79,6 @@ class ChatbotService {
     try {
       // 🔐 Sign in anonymously if needed
       await _ensureSignedIn();
-      print("Signed in user UID: ${FirebaseAuth.instance.currentUser?.uid}");
 
       QuerySnapshot snapshot = await _firestore.collection('Zones').get();
 
@@ -106,7 +106,6 @@ class ChatbotService {
     try {
       // 🔐 Sign in anonymously if needed
       await _ensureSignedIn();
-      print("Signed in user UID: ${FirebaseAuth.instance.currentUser?.uid}");
       QuerySnapshot snapshot = await _firestore.collection('Zones').get();
 
       for (var doc in snapshot.docs) {
