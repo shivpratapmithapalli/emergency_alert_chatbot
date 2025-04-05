@@ -1,0 +1,2 @@
+D:/Programming/Flutter/emergency_alert_app/android/app/.cxx/Debug/t5u5qk1g/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Programming/Flutter/emergency_alert_app/android/app/.cxx/Debug/t5u5qk1g/arm64-v8a/CMakeFiles/rebuild_cache.dir
